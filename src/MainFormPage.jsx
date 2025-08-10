@@ -52,8 +52,22 @@ function HeroSection({ onStart }) {
         <Box sx={{ position: 'absolute', bottom: '20%', left: '10%', width: 80, height: 80, borderRadius: '50%', background: isDark ? 'linear-gradient(45deg, rgba(156,39,176,0.1), rgba(233,30,99,0.1))' : 'linear-gradient(45deg, rgba(156,39,176,0.08), rgba(233,30,99,0.08))', filter: 'blur(30px)' }} />
         <Box sx={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23${isDark ? '1e293b' : 'e2e8f0'}' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`, opacity: 0.3 }} />
       </Box>
-      <Container maxWidth={false} sx={{ position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-            <Box sx={{ width: '80%', maxWidth: 1200, display: 'flex', flexDirection: { xs: 'column', lg: 'row' }, alignItems: 'center', justifyContent: 'space-between', gap: { xs: 4, lg: 8 }, pt: { xs: 6, md: 10 }, pb: { xs: 3, md: 6 }, textAlign: { xs: 'center', lg: 'left' }, mx: 'auto' }}>
+      <Container
+        maxWidth={false}
+        sx={{
+          position: 'relative',
+          zIndex: 1,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          // Override global .MuiContainer-root width for the hero only so it spans wider
+          width: '92% !important',
+          maxWidth: 'none !important',
+          px: { xs: 2, md: 3 },
+        }}
+      >
+            <Box sx={{ width: '92%', maxWidth: 1400, display: 'flex', flexDirection: { xs: 'column', lg: 'row' }, alignItems: 'center', justifyContent: 'space-between', gap: { xs: 4, lg: 8 }, pt: { xs: 6, md: 10 }, pb: { xs: 3, md: 6 }, textAlign: { xs: 'center', lg: 'left' }, mx: 'auto' }}>
           <Box sx={{ flex: '0 0 60%', maxWidth: { xs: '100%', lg: '60%' } }}>
             <Box sx={{ display: 'inline-flex', alignItems: 'center', gap: 1, px: 2, py: 0.5, mb: 3, background: isDark ? 'linear-gradient(90deg, rgba(33,150,243,0.2), rgba(33,203,243,0.2))' : 'linear-gradient(90deg, rgba(33,150,243,0.1), rgba(33,203,243,0.1))', borderRadius: 3, border: `1px solid ${isDark ? 'rgba(33,150,243,0.3)' : 'rgba(33,150,243,0.2)'}` }}>
               <Box sx={{ width: 8, height: 8, borderRadius: '50%', background: 'linear-gradient(90deg, #2196f3, #21cbf3)', animation: 'pulse 2s infinite' }} />
@@ -92,7 +106,7 @@ function HeroSection({ onStart }) {
 
         {/* Full-width tagline below the two-column hero so it doesn't inherit column constraints */}
         <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-          <Box sx={{ width: '80%', maxWidth: 1200 }}>
+          <Box sx={{ width: '92%', maxWidth: 1400 }}>
             <Box sx={{ display: 'flex', gap: 2, mt: 0, mb: 4, justifyContent: { xs: 'center', lg: 'flex-start' }, opacity: 0.98, alignItems: 'center', flexDirection: { xs: 'column', sm: 'row' }, flexWrap: 'wrap' }}>
               {[
                 'Trusted Strategic Guidance',
