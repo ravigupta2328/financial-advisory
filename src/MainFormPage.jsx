@@ -67,13 +67,13 @@ function HeroSection({ onStart }) {
           px: { xs: 2, md: 3 },
         }}
       >
-            <Box sx={{ width: '92%', maxWidth: 1400, display: 'flex', flexDirection: { xs: 'column', lg: 'row' }, alignItems: 'center', justifyContent: 'space-between', gap: { xs: 4, lg: 8 }, pt: { xs: 6, md: 10 }, pb: { xs: 3, md: 6 }, textAlign: { xs: 'center', lg: 'left' }, mx: 'auto' }}>
-          <Box sx={{ flex: '0 0 60%', maxWidth: { xs: '100%', lg: '60%' } }}>
+            <Box sx={{ width: '92%', maxWidth: 1400, display: 'flex', flexDirection: { xs: 'column', lg: 'row' }, alignItems: { xs: 'center', lg: 'flex-start' }, justifyContent: 'space-between', gap: { xs: 4, lg: 8 }, pt: { xs: 6, md: 10 }, pb: { xs: 3, md: 6 }, textAlign: { xs: 'center', lg: 'left' }, mx: 'auto' }}>
+          <Box sx={{ flex: '0 0 60%', maxWidth: { xs: '100%', lg: '60%' }, overflow: 'visible' }}>
             <Box sx={{ display: 'inline-flex', alignItems: 'center', gap: 1, px: 2, py: 0.5, mb: 3, background: isDark ? 'linear-gradient(90deg, rgba(33,150,243,0.2), rgba(33,203,243,0.2))' : 'linear-gradient(90deg, rgba(33,150,243,0.1), rgba(33,203,243,0.1))', borderRadius: 3, border: `1px solid ${isDark ? 'rgba(33,150,243,0.3)' : 'rgba(33,150,243,0.2)'}` }}>
               <Box sx={{ width: 8, height: 8, borderRadius: '50%', background: 'linear-gradient(90deg, #2196f3, #21cbf3)', animation: 'pulse 2s infinite' }} />
               <Typography variant="caption" sx={{ fontWeight: 600, color: isDark ? '#90caf9' : '#1976d2', textTransform: 'uppercase', letterSpacing: 1 }}>SEBI Registered Investment Adviser</Typography>
             </Box>
-            <Typography variant="h2" sx={{ fontWeight: 900, fontSize: { xs: '2.5rem', sm: '3rem', md: '3.5rem', lg: '4rem' }, lineHeight: 1.1, mb: 3, background: isDark ? 'linear-gradient(135deg, #ffffff 0%, #90caf9 100%)' : 'linear-gradient(135deg, #1e293b 0%, #334155 100%)', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', letterSpacing: '-0.02em' }}>Transforming Your Personal Finances with Strategic Precision</Typography>
+            <Typography variant="h2" sx={{ fontWeight: 900, fontSize: { xs: '2.5rem', sm: '3rem', md: '3.5rem', lg: '4rem' }, lineHeight: 1.1, mb: 3, pb: { xs: 0.5, md: 1 }, background: isDark ? 'linear-gradient(135deg, #ffffff 0%, #90caf9 100%)' : 'linear-gradient(135deg, #1e293b 0%, #334155 100%)', backgroundClip: 'text', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', letterSpacing: '-0.02em' }}>Transforming Your Personal Finances with Strategic Precision</Typography>
             <Typography variant="h5" sx={{ color: isDark ? 'rgba(255,255,255,0.8)' : 'rgba(30,41,59,0.8)', mb: 2, fontWeight: 400, lineHeight: 1.4, maxWidth: '100%', mx: { xs: 'auto', lg: 0 } }}>Empowering Your Journey to Financial Independence and Confidently Realizing Your Life's Most Important Goals.</Typography>
             <Typography variant="body1" sx={{ fontStyle: 'italic', color: isDark ? 'rgba(255,255,255,0.7)' : 'rgba(30,41,59,0.7)', mb: 4, maxWidth: '100%', mx: { xs: 'auto', lg: 0 } }}>&quot;Beyond managing wealth, we engineer your financial future.&quot; — Ravi Gupta</Typography>
             <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 2, justifyContent: { xs: 'center', lg: 'flex-start' } }}>

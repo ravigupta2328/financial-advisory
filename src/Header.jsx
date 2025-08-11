@@ -170,7 +170,7 @@ export default function Header({ ColorModeToggle, children, showColorToggle = tr
             textDecoration: 'none',
           }}
         >
-          <Box component="img" src="/static/logo.png" alt="Aars Chambers" sx={{ height: { xs: 32, sm: 36, md: 48 }, objectFit: 'contain' }} />
+          <Box component="img" src={`${import.meta.env.BASE_URL}static/logo.png`} alt="Aars Chambers" sx={{ height: { xs: 32, sm: 36, md: 48 }, objectFit: 'contain' }} />
         </Box>
         
         {/* Desktop: Nav links on right */}
